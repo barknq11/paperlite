@@ -4,6 +4,8 @@
 
 PaperLite is built from the ground up in Rust using immediate-mode GPU rendering (`egui` + `glow` / `wgpu`). It has near-instant startup (< 0.05s), tiny memory consumption (~20-30MB RAM), and a standalone release binary of only ~5.8 MB.
 
+![PaperLite Screenshot](assets/screenshot.png)
+
 ---
 
 ## ✨ Features

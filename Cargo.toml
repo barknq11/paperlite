@@ -1,0 +1,25 @@
+﻿[package]
+name = "paperlite"
+version = "0.1.0"
+edition = "2021"
+description = "Lightweight, GPU-accelerated wallpaper browser & manager for Windows & Linux (swaybg)"
+
+[dependencies]
+eframe = { version = "0.29", default-features = false, features = ["default_fonts", "glow", "wayland", "x11"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp", "bmp"] }
+walkdir = "2.5"
+rfd = "0.15"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+crossbeam-channel = "0.5"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = [
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_Registry",
+    "Win32_System_Console",
+    "Win32_Foundation"
+] }
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"

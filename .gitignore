@@ -1,0 +1,14 @@
+﻿# Rust build artifacts
+/target/
+**/*.rs.bk
+
+# Compiled binaries
+paperlite.exe
+*.exe
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

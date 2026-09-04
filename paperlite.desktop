@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=PaperLite
+Comment=Lightweight GPU-Accelerated Wallpaper Manager
+Exec=paperlite %F
+Terminal=false
+Type=Application
+Icon=paperlite
+Categories=Utility;Graphics;Settings;
+StartupNotify=true
+

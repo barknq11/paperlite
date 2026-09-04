@@ -44,14 +44,9 @@ PaperLite is an ultra-lightweight, GPU-accelerated wallpaper browser and manager
 
 ### On Linux (Sway / Hyprland / Wayfire)
 
-1. Ensure `swaybg` is installed:
+1. Run the one-time setup script (installs Rust toolchain & `swaybg` automatically):
    ```bash
-   # Arch Linux:
-   sudo pacman -S swaybg
-   # Ubuntu / Debian:
-   sudo apt install swaybg
-   # Fedora:
-   sudo dnf install swaybg
+   ./setup.sh
    ```
 2. Launch the app:
    ```bash
@@ -131,6 +126,7 @@ agy/
 ├── Remove_RightClick_Menu.bat  # Removes the Explorer context menu entry
 ├── run.bat                     # Windows launcher script
 ├── run.sh                      # Linux launcher & auto-build script
+├── setup.sh                    # Linux one-time setup (installs Rust & swaybg)
 ├── paperlite.desktop           # Linux desktop entry file
 ├── README.md                   # Full user and developer guide
 ├── handoff.md                  # This file (summary & run guide)

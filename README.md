@@ -38,11 +38,11 @@ PaperLite is built from the ground up in Rust using immediate-mode GPU rendering
    ```
 
 ### Linux (Wayland / Sway / Hyprland)
-1. Ensure `swaybg` is installed on your distribution:
-   - Arch Linux: `sudo pacman -S swaybg`
-   - Fedora: `sudo dnf install swaybg`
-   - Ubuntu / Debian: `sudo apt install swaybg`
-2. Run:
+1. Run the setup script (installs Rust & swaybg automatically):
+   ```bash
+   ./setup.sh
+   ```
+2. Launch PaperLite:
    ```bash
    ./run.sh
    ```
@@ -84,6 +84,8 @@ PaperLite automatically writes the current wallpaper selection to `~/.config/swa
 
 ## 🛠️ Building From Source
 
+Make sure Rust is installed (`./setup.sh` handles this), then:
+
 ```bash
 # Debug build (fast compile):
 cargo build
@@ -111,5 +113,6 @@ paperlite/
 │   └── main.rs             # CLI parser & native window runner
 ├── run.bat                 # Windows 1-click launcher
 ├── run.sh                  # Linux launcher
+├── setup.sh                # Linux one-time setup (installs Rust & swaybg)
 └── Cargo.toml
 ```

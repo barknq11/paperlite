@@ -63,11 +63,11 @@ paperlite --apply /path/to/wallpaper.png --mode center
 ### Sway / Hyprland Autostart Integration
 PaperLite automatically writes the current wallpaper selection to `~/.config/swaybg/current_wallpaper.sh`.
 
-- **Modern Hyprland** (`~/.config/hypr/hyprland.lua`):
+- **Modern Hyprland (Lua)** (`~/.config/hypr/hyprland.lua`):
   ```lua
-  exec_once = {
-      "~/.config/swaybg/current_wallpaper.sh",
-  }
+  hl.on("hyprland.start", function ()
+    hl.exec_cmd("~/.config/swaybg/current_wallpaper.sh")
+  end)
   ```
 - **Classic Hyprland** (`~/.config/hypr/hyprland.conf`):
   ```ini

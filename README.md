@@ -1,4 +1,4 @@
-﻿# 🌌 PaperLite
+# 🌌 PaperLite
 
 > **Ultra-lightweight, GPU-accelerated wallpaper browser & manager for Windows and Linux.**
 
@@ -63,13 +63,19 @@ paperlite --apply /path/to/wallpaper.png --mode center
 ### Sway / Hyprland Autostart Integration
 PaperLite automatically writes the current wallpaper selection to `~/.config/swaybg/current_wallpaper.sh`.
 
+- **Modern Hyprland** (`~/.config/hypr/hyprland.lua`):
+  ```lua
+  exec_once = {
+      "~/.config/swaybg/current_wallpaper.sh",
+  }
+  ```
+- **Classic Hyprland** (`~/.config/hypr/hyprland.conf`):
+  ```ini
+  exec-once = ~/.config/swaybg/current_wallpaper.sh
+  ```
 - **Sway** (`~/.config/sway/config`):
   ```sway
   exec_always ~/.config/swaybg/current_wallpaper.sh
-  ```
-- **Hyprland** (`~/.config/hypr/hyprland.conf`):
-  ```hyprland
-  exec-once = ~/.config/swaybg/current_wallpaper.sh
   ```
 
 ---

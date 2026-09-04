@@ -89,13 +89,19 @@ paperlite --apply "/path/to/image.png" --mode fit
 Whenever a wallpaper is chosen in PaperLite on Linux, the script `~/.config/swaybg/current_wallpaper.sh` is automatically created and updated.
 
 To restore your wallpaper automatically on login/boot:
+- **Modern Hyprland** (`~/.config/hypr/hyprland.lua`):
+  ```lua
+  exec_once = {
+      "~/.config/swaybg/current_wallpaper.sh",
+  }
+  ```
+- **Classic Hyprland** (`~/.config/hypr/hyprland.conf`):
+  ```ini
+  exec-once = ~/.config/swaybg/current_wallpaper.sh
+  ```
 - **Sway** (`~/.config/sway/config`):
   ```sway
   exec_always ~/.config/swaybg/current_wallpaper.sh
-  ```
-- **Hyprland** (`~/.config/hypr/hyprland.conf`):
-  ```hyprland
-  exec-once = ~/.config/swaybg/current_wallpaper.sh
   ```
 
 ---
